@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>3.2ampliacion</title>
+    <style>
+        
+        img {
+            width: 100vw; 
+            height: 100vh; 
+            object-fit: cover;
+            position: absolute;
+            z-index: -1; 
+        }
+
+        
+        body {
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+        }
+
+        
+        a {
+            text-decoration: none; 
+            font-size: 3rem; 
+            font-family: Arial, sans-serif; 
+            font-weight: bold; 
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+   
+    <img id="fondo" src="images/curry.jpg">
+
+    
+    <a href="https://www.sportingnews.com/es/nba">Ir a NBA</a>
+
+   
+    <script>
+       
+        let a = [
+            "images/curry.jpg",
+            "images/lebron.jpg",
+            "images/jockic.jpg"
+        ];
+
+      
+        function cambiarImg() {
+            
+            let i = Math.floor(Math.random() * a.length);
+
+            
+            document.getElementById("fondo").src = a[i];
+
+            
+            setTimeout(cambiarImg, 5000);
+        }
+
+        
+        cambiarImg();
+    </script>
+</body>
+</html>
